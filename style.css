@@ -1,0 +1,187 @@
+/* Font Imports */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+
+/* CSS Variables */
+:root {
+  --primary-brown: hsl(14, 45%, 36%);
+  --primary-raspberry: hsl(332, 51%, 32%);
+  --background-light: hsl(30, 54%, 90%);
+  --card-bg: hsl(330, 100%, 98%);
+  --text-dark: hsl(24, 5%, 18%);
+  --border-light: #ddd;
+  
+  --font-serif: "Young Serif", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-outfit: "Outfit", sans-serif;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  background-color: var(--background-light);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Recipe Card */
+.recipe-card {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-radius: 10px;
+}
+
+/* Recipe Image */
+.recipe-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Recipe Title */
+.recipe-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+/* Recipe Description */
+.recipe-description {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  line-height: 1.5;
+}
+
+/* Preparation Time Section */
+.prep-time {
+  width: 100%;
+  background-color: var(--background-light);
+  padding: 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  border-radius: 10px;
+}
+
+.prep-title {
+  color: var(--primary-raspberry);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.prep-list {
+  padding-left: 1.5rem;
+  color: var(--text-dark);
+}
+
+.prep-list li {
+  margin-bottom: 0.5rem;
+}
+
+.prep-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Section Styles */
+.section-title {
+  color: var(--primary-brown);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/* Ingredients Section */
+.ingredients-list {
+  padding-left: 1.5rem;
+  color: var(--text-dark);
+  font-family: var(--font-sans);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  font-size: 0.9rem;
+}
+
+/* Instructions Section */
+.instructions-list {
+  padding-left: 1.5rem;
+  color: var(--text-dark);
+  font-family: var(--font-outfit);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+/* List Markers */
+li::marker {
+  color: var(--primary-raspberry);
+  font-weight: bold;
+}
+
+li {
+  padding-left: 0.8rem;
+}
+
+/* Divider */
+.divider {
+  width: 100%;
+  margin: 0;
+  border: none;
+  border-top: 1px solid var(--border-light);
+}
+
+/* Nutrition Section */
+.nutrition {
+  color: var(--primary-brown);
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.nutrition p {
+  font-family: var(--font-sans);
+  margin: 1rem 0;
+  color: var(--text-dark);
+}
+
+/* Nutrition Table */
+.nutrition-table {
+  color: var(--text-dark);
+  font-family: var(--font-outfit);
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.nutrition-table tr {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.nutrition-table tr.no-border {
+  border-bottom: none;
+}
+
+.nutrition-table td {
+  padding: 0.8rem 1.5rem;
+}
+
+.nutrition-table td:first-child {
+  font-weight: normal;
+}
+
+.nutrition-value {
+  font-weight: bold;
+  color: var(--primary-brown);
+}
